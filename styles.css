@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&display=swap');
+
+* {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0px;
+}
+
+body {
+	background-color: gainsboro;
+}
+
+nav {
+	z-index: 9999;
+	display: flex;
+	padding: 20px 0px;
+	gap: 300px;
+	justify-content: center;
+	background-color: rgb(29, 29, 29);
+	box-shadow: 0px 3px 15px black;
+	position: sticky;
+	top: 0px;
+}
+
+.nav-link {
+	text-decoration: none;
+	padding: 7px 50px;
+	font-weight: 300;
+	color: gray;
+}
+
+.nav-link:hover {
+	color: rgb(72, 72, 72);
+}
+
+.bg-image {
+	overflow: hidden;
+}
+
+.bg-image img {
+	background: url('https://www.gannett-cdn.com/-mm-/e162e8c5bd58e21654b1a47c15bc918050497e25/c=101-0-3506-1922/local/-/media/USATODAY/test/2013/12/06//1386355617000-2415-FPF-00246R.JPG?width=3200&height=1807&fit=crop&format=pjpg&auto=webp');
+	filter: blur(3px);
+	transform: scale(1.1);
+	height: 100vh;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bg-text {
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+}
+
+#hobbies {
+	margin-top: 100px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#hobbies article {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	width: 400px;
+	height: 500px;
+	margin-bottom: 80px;
+	box-shadow: 5px 7px 20px gray;
+	overflow: hidden;
+}
+
+#hobbies article div {
+	display: none;
+}
+
+#hobbies article:hover > div {
+	display: unset;
+}
+
+#hobbies article div img {
+	width: 100vh;
+	height: 100vh;
+	filter: blur(3px);
+}
+
+#hobbies article * {
+	transition: 200ms ease-in-out;
+	margin-bottom: 30px;
+}
+
+#hobbies article img {
+	margin-top: 50px;
+	border-radius: 30%;
+	padding: 20px;
+	width: 50px;
+	height: 50px;
+}
+
+#hobbies article img[alt='gaming'] {
+	background-color: darkseagreen;
+}
+
+#hobbies article img[alt='gaming'] + h1 {
+	color: darkseagreen;
+}
+
+#hobbies article img[alt='coding'] {
+	background-color: darkviolet;
+}
+
+#hobbies article img[alt='coding'] + h1 {
+	color: darkviolet;
+}
+
+#hobbies article img[alt='swimming'] {
+	background-color: darkturquoise;
+}
+
+#hobbies article img[alt='swimming'] + h1 {
+	color: darkturquoise;
+}
+
+#hobbies article:hover > img,
+#hobbies article:hover > h1 {
+	transition: 200ms ease-in-out;
+	transform: translate(-150px, 0px);
+	opacity: 0%;
+}
+
+#hobbies article p {
+	position: absolute;
+	text-align: center;
+	width: 300px;
+	left: 300px;
+	/* top: 200px; */
+	color: whitesmoke;
+	opacity: 0%;
+	transition: 250ms ease-in-out;
+}
+
+#hobbies article:hover img[alt='gaming'] ~ p {
+	left: 50px;
+	top: 211.6px;
+	transition: 250ms ease-in-out;
+	transition-delay: 100ms;
+	opacity: 100%;
+}
+
+#hobbies article:hover img[alt='coding'] ~ p {
+	left: 50px;
+	top: 163.6px;
+	transition: 250ms ease-in-out;
+	transition-delay: 100ms;
+	opacity: 100%;
+}
+
+#hobbies article:hover img[alt='swimming'] ~ p {
+	left: 50px;
+	top: 192.4px;
+	transition: 250ms ease-in-out;
+	transition-delay: 100ms;
+	opacity: 100%;
+}
+
+.profile {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: white;
+	height: 340px;
+	box-shadow: 0px 0px 7px gray;
+}
+
+.profile .profile-img {
+	/* background-image: url('./assets/profile-picture.jpg'); */
+	background-image: url('https://www.gannett-cdn.com/-mm-/e162e8c5bd58e21654b1a47c15bc918050497e25/c=101-0-3506-1922/local/-/media/USATODAY/test/2013/12/06//1386355617000-2415-FPF-00246R.JPG?width=3200&height=1807&fit=crop&format=pjpg&auto=webp');
+	width: 150px;
+	height: 150px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+	box-shadow: 0px 0px 14px 1px gray;
+}
+
+.profile .profile-info * {
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+#bio-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 30px 0px;
+}
+
+#bio-section .bio {
+	background-color: white;
+	width: 500px;
+	height: 500px;
+	box-shadow: 0px 0px 7px gray;
+	padding: 20px 0px;
+	margin-bottom: 30px;
+	overflow: hidden;
+	transition: 150ms ease-in-out;
+	position: relative;
+}
+#bio-section .bio h1 {
+	position: absolute;
+	top: 255.2px;
+	transition: 150ms ease-in-out;
+	font-size: x-large;
+}
+
+#bio-section .bio.edu h1 {
+	left: 99.1px;
+}
+
+#bio-section .bio.proj h1 {
+	left: 198.2px;
+}
+
+#bio-section .bio.cert h1 {
+	left: 120.6px;
+}
+
+#bio-section .bio:hover h1 {
+	top: 70px;
+}
+
+#bio-section .bio img {
+	transition: 200ms ease-in-out;
+	position: absolute;
+	top: 500px;
+	width: 500px;
+	opacity: 0;
+}
+#bio-section .bio:hover img {
+	top: 100px;
+	opacity: 1;
+}
+
+footer {
+	position: sticky;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 50px;
+	background-color: rgb(29, 29, 29);
+}
+
+footer section a {
+	text-decoration: none;
+}
+
+.bi-twitter {
+	color: aqua;
+}
+
+#twitter a {
+	color: aqua;
+}
+
+#gmail a {
+	color: greenyellow;
+}
+
+#phone-num,
+#phone-num i {
+	color: whitesmoke;
+}
