@@ -244,7 +244,7 @@ nav {
 }
 
 #bio-section .bio img {
-	transition: top 200ms ease-in-out 0s;
+	transition: top 200ms ease-in-out;
 	position: absolute;
 	top: 500px;
 	width: 500px;
@@ -254,7 +254,7 @@ nav {
 #bio-section .bio:hover img {
 	top: 100px;
 	filter: blur(0px);
-	transition: filter 50ms ease-in-out 0.25s;
+	transition: top 200ms ease-in-out, filter 50ms ease-in 0.5s;
 	opacity: 1;
 }
 
